@@ -1,0 +1,120 @@
+body {
+    font-family: 'Times New Roman', Times, serif;
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    /* background-color: rgba(58, 156, 160, 0.7); */
+    background-image: url('../images/main.png');
+   
+    background-repeat: no-repeat;
+    background-attachment:fixed;
+    background-size:100% 100%;
+    
+    /* background-color: rgba(164, 204, 214, 0.9);
+    background-blend-mode: lighten; */
+    /* opacity: 0.8; */
+}
+
+div.topbar{
+    display: flex;
+    flex-direction:row;
+    align-items:center;
+    justify-content:space-between;
+    background-color: rgb(46, 42, 42);
+    width: 100%;
+    height: 60px;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+
+
+}
+.topleft a,.topright a{
+    float: left;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+}
+.topleft a:hover,.topright a:hover {
+    background-color: #ddd;
+    color: rgb(0, 0, 0);
+}
+.topleft a.active,.topright a.active{
+    background-color: #04AA6D;
+    color: white; 
+}
+div.mainbody{
+    /* width: 100%;
+    height: 100%; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content:center ;
+    background-color: rgba(58, 156, 160, 0.7);
+    /* background-blend-mode: overlay; */
+    /* opacity: 0.5; */
+}
+div.mainbody > div h1{
+    letter-spacing: 5px;
+    color: white;
+    font-size: 70px;
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+div h4{
+    color: rgb(230, 0, 107);
+    font-size: 25px;
+    letter-spacing: 3px;
+    padding: 10px;
+    padding-bottom: 1px;
+    border-bottom:3px solid rgb(230, 0, 107);
+    margin-bottom: 35px;
+
+}
+div.form1{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* justify-content: center; */
+    background-color: rgba(58, 156, 160, 0.7);
+    /* background-color: rgb(59, 51, 51); */
+    padding: 10px;
+    /* border-radius: 10px; */
+    height: 100%;
+}
+div.form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    /* background-color: rgba(58, 156, 160, 0.7); */
+    background-color: rgb(59, 51, 51);
+    padding: 10px;
+    border-radius: 10px;
+}
+div.signupform{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(59, 51, 51);
+    padding: 10px;
+    /* border-radius: 10px; */
+}
+div.signupfield input{
+    height: 35px;
+    width: 300px;
+    /* padding: 10px;
+    padding-top: 5px; */
+    margin-right: 20px;
+    margin-bottom: 15px;
+    border:white solid 0px;
+    border-radius: 5px;
+}
+div.signupfield label{
+    display:block;       /* make a element a block element */
+    text-align:center;
+    color:white;
+    font-weight:bold;
+}

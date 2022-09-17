@@ -1,0 +1,28 @@
+div.topbar{
+    display: flex;
+    flex-direction:row;
+    align-items:center;
+    justify-content:space-between;
+    background-color: rgb(46, 42, 42);
+    width: 100%;
+    height: 60px;
+    /* position: fixed; */
+    /* overflow: hidden; */
+
+}
+.topleft a,.topright a{
+    float: left;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+}
+.topleft a:hover,.topright a:hover {
+    background-color: #ddd;
+    color: rgb(0, 0, 0);
+}
+.topleft a.active,.topright a.active{
+    background-color: #04AA6D;
+    color: white; 
+}

@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+        <title>User Panel</title>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css">    <!-- semantic-ui cdn -->   <!--bootstrep-->
+        <link rel="stylesheet" href="../css/userstyle.css">
+    </head>
+    <body>
+        <div class="topbar">
+            <div class="topleft">
+              
+            </div>
+            <div class="topright">
+              
+            </div>
+        </div>
+        <div class="main">
+            <div class="menubar">
+                <div class="menuinfo">
+                    <a href="/home/all/index.php"><button class="ui inverted teal button">HOME</button></a>
+                </div>
+
+                <div class="menuinfo">
+                    <a href="userreport.php"><button class="ui inverted teal button">ISSUE REPROT</button></a>
+                </div>
+
+                <div class="menuinfo">
+                    <a href="usersubscription.php"><button class="ui inverted teal button">SUBCRIPTIONS</button></a>
+                </div>
+
+                <div class="menuinfo">
+                    <a href="userbilling.php"><button class="ui inverted teal button">BILLING</button></button></a>
+                </div>
+
+                <div class="menuinfo">
+                    <a href="userinfo.php"><button class="ui inverted teal button">USER INFO</button></a>
+                </div>
+
+                <div class="menuinfo">
+                    <a href="logout.php"><button class="ui inverted teal button">LOGOUT</button></a>
+                </div>
+
+            </div>
+            <div class="body">
+                <div class="welcome">
+                    <h2>Welcome <span>Aman Khan</span></h2>
+                </div>
+                
+                <div class="myinfo">
+                    <h3>MY INFO</h3>
+                </div>
+
+                <div class="info">
+                    <!-- <?php
+
+                    $servername = "localhost";
+                    $username = "root";
+                    $password = "";
+                    $dbname = "dhaka isp";
+
+                   
+                    $id = $_GET['userid'];
+
+                    $conn = new mysqli($servername, $username, $password, $dbname);
+                    if ($conn->connect_errno) {
+                      printf("Connect failed: %s\n", $conn->connect_error);
+                      exit();
+                    }
+
+                    $query = "SELECT First_Name,Last_Name,Email,Address,mobile FROM user WHERE user_id = $id";
+                      if ($result = $conn->query($query)) {
+                     
+                      if($result->num_rows>"0"){
+                          //print("%s",$row["First_Name"]);
+
+                          while ($row = $result->fetch_assoc()) {
+                              extract($row);
+                            // print("<form action='page.php' method='get'>
+                            //             f0:<input type='text' name='CourseID' value='$First_Name'> 
+                                                                                   
+                            //             <input type='submit' value='Edit' name='Edit' >
+                            //         </form>"); -->
+                            print("<form id='' class='' action='updateinfodatabase.php' method='get'>
+                                    <!-- <h3 class=' text-white pt-5'></h3> -->
+        
+                                        <label for='First_Name' class=''><b>First_Name:</b></label>
+                                        <br>
+                                        <input type='text' name='First_Name' id='First_Name' value='$First_Name' class='' required>
+                                        <br>
+
+                                        <label for='Last_Name' class=''><b>Last_Name:</b></label> 
+                                        </br>
+                                        <input type='text' name='Last_Name' id='Last_Name' value='$Last_Name' class='' required>
+                                        <br>
+
+                                        <label for='email' class=''><b>Email:</b></label> 
+                                        <br>
+                                        <input type='text' name='Email' id='email' value='$Email' class='' required>
+                                        <br>
+
+                                        <label for='address' class=''><b>Address:</b></label> 
+                                        <br>
+                                        <input type='text' name='Address' id='address' value='$Address' class='' required>
+                                        <br>
+
+                                        <label for='mobile' class=''><b>Phone No:</b></label> 
+                                        <br>
+                                        <input type='text' name='mobile' id='mobile' value='$mobile' class='' required>
+                                        <br>
+
+                                        <input type='hidden' name='userid' id='Last_Name' value='$id' class=''>
+                                    
+                                    <div class='submit_btn'>
+                                        <input type='submit' name='Update' class='' value='Update Info'>
+                                    </div>
+                                </form>");
+
+
+
+                          <!-- }
+       
+
+                      $result->free(); //free result set
+                      }
+                      else{
+                        printf("<h3><b>Requirement not match!</b></h3>");
+                      }
+                      }
+                      else
+                      {
+                        printf("No record found!");
+                      }
+                      $conn->close();
+
+        ?> -->
+
+                </div>
+
+            </div>
+
+        </div>
+    </body>
+</html>

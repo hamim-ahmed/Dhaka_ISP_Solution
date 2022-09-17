@@ -1,0 +1,292 @@
+
+
+<?php
+            // session_start();
+            // if(isset($_SESSION['ispid'])){
+            //     $id = $_SESSION['ispid'];
+            //     require_once("db_connection.php");
+            //     $conn = new mysqli($servername,$username,$password,$dbname);
+            //     if($conn->connect_errno){
+            //         printf("database Connection failed:%s\n",$conn->connect_error);
+            //         exit();
+            //     }
+            //     $query = "SELECT image from tb_upload where id = 10 ";
+            //     $result = $conn->query($query);
+            //     while ($row = $result->fetch_assoc()) {
+            //         extract($row);
+            //         printf($image);
+                    
+                // }
+
+
+        ?> 
+<?php
+    header('content-type: text/css; charset:UTF-8');
+    session_start();
+    // if(isset($_SESSION['ispid'])){
+    //     $id = $_SESSION['ispid'];
+    //     require_once("db_connection.php");
+    //     $conn = new mysqli($servername,$username,$password,$dbname);
+    //     if($conn->connect_errno){
+    //         printf("database Connection failed:%s\n",$conn->connect_error);
+    //         exit();
+    //     }
+    // //     $query = "SELECT image from tb_upload where id = 10 ";
+    // //     $result = $conn->query($query);
+    // //     while ($row = $result->fetch_assoc()) {
+    // //         extract($row);
+    // //         printf($image);
+            
+    //     }
+    // else{
+
+    // }
+        $id = $_SESSION['ispid'];
+        $query = "SELECT image from isp_admin where isp_id = $id ";
+        // $result = $conn->query($query);
+        // while ($row = $result->fetch_assoc()) {
+        //     extract($row);
+        // }
+
+?>
+body {
+    font-family: 'Times New Roman', Times, serif;
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background-image: url('../images/main.png');
+    background-repeat: no-repeat;
+    background-attachment:fixed;
+    background-color: rgba(58, 156, 160, 0.7);
+    background-size:100% 100%;
+
+    /* background-color: rgba(164, 204, 214, 0.9);
+    background-blend-mode: lighten; */
+    /* opacity: 0.8; */
+} 
+
+div.topbar{
+    display: flex;
+    flex-direction:row;
+    align-items:center;
+    justify-content:space-between;
+    background-color: rgb(46, 42, 42);
+    width: 100%;
+    height: 60px;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+
+}
+.topleft a,.topright a{
+    float: left;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+}
+.topleft a:hover,.topright a:hover {
+    background-color: #ddd;
+    color: rgb(0, 0, 0);
+}
+.topleft a.active,.topright a.active{
+    background-color: #04AA6D;
+    color: white; 
+}
+div.mainbody{
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content:center ;
+    flex-grow: 1;    /* rest of the body height to mainbody*/
+    background-color: rgba(58, 156, 160, 0.75);
+    background-blend-mode: overlay;
+    /* opacity: 0.5; */
+}
+div.mainbody > div h1{
+    letter-spacing: 5px;
+    color: white;
+    font-size: 70px;
+    padding-top: 30px;
+    padding-bottom: 40px;
+}
+div h4{
+    color: rgb(230, 0, 107);
+    font-size: 25px;
+    letter-spacing: 3px;
+    padding: 10px;
+    padding-bottom: 35px;
+    /* border-bottom:3px solid rgb(230, 0, 107); */
+    margin-bottom: 35px;
+
+}
+div.form1{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* justify-content: center; */
+    background-color: rgba(58, 156, 160, 0.7);
+    /* background-color: rgb(59, 51, 51); */
+    padding: 10px;
+    /* border-radius: 10px; */
+    height: 100%;
+}
+div.form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(59, 51, 51);
+    padding: 30px;
+    /* height: 100%; */
+    border-radius: 5px;
+}
+div.form input{
+    height: 35px;
+    width: 300px;
+    /* padding: 10px;
+    padding-top: 5px; */
+    margin-bottom: 35px;
+    border:white solid 0px;
+    border-radius: 5px;
+}
+div.form label{
+    display:block;       /* make a element a block element */
+    text-align:center;
+    color:white;
+    font-weight:bold;
+}
+
+/* custom css form for customsearh.php */
+
+div.custom{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* justify-content: center; */
+    background-color: rgba(58, 156, 160, 0.7);
+    /* background-color: rgb(59, 51, 51); */
+    padding: 10px;
+    /* border-radius: 10px; */
+    min-height: 100%;
+}
+div.search_btn{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
+}
+div.customform{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    /* background-color: rgb(59, 51, 51); */
+    padding: 10px;
+    /* height: 100%; */
+    border-radius: 5px;
+}
+div.customform input{
+    height: 45px;
+    width: 700px;
+    /* padding: 10px;
+    padding-top: 5px; */
+    margin-bottom: 15px;
+    border:white solid 0px;
+    border-radius: 5px;
+}
+div.customform label{
+    display:block;       /* make a element a block element */
+    text-align:center;
+    color:white;
+    font-size: 20px;
+    padding-bottom: 20px;
+    font-weight:normal;
+}
+
+
+div.mainbody h1{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    margin:10px;
+    background-color: rgb(72, 54, 121);
+    color: white;
+    letter-spacing: 3PX;
+    border-radius: 10px;
+}
+
+div.mainbody input{
+    height: 35px;
+    width: 700px;
+    padding: 20px;
+    margin: 10px;
+    font-weight: bold;
+    font-size: large;
+    background: turquoise;
+    /* margin-right: 0px; */
+    border:rgb(216, 215, 215) solid 1px;
+    border-radius: 5px;
+}
+div.mainbody textarea{
+    width: 700px;
+    font-weight: bold;
+    font-size: large;
+    background: turquoise;
+    padding: 20px;
+    margin: 10px;
+    border:rgb(216, 215, 215) solid 1px;
+    border-radius: 5px;
+}
+div.submit_btn>input{
+    align-items: center;
+    height: 50px;
+    width: 200px;
+    margin-left: 280px;
+    background-color: rgb(52, 255, 11);
+    color: white;
+    font-weight: bold;
+    text-align: center;
+}
+div.mainbody label{
+    margin-left: 10px;
+    align-items: center;
+    color: white;
+}
+
+/* for search table design */
+
+table,th,td{
+    border:1.5px solid blue;
+    border-collapse: collapse;
+    font-size: 20px;
+    color:white;
+    background-color:rgb(43, 39, 39);
+    opacity:0.9;  /*to keep the text fixed ,use RGBa color */
+    width:100%;
+    height:100%
+    
+    
+}
+
+th,td{
+    width: 300px;;
+    padding:5px;
+    text-align: center;
+    
+}
+th{
+    color:red;
+    background-color:white;
+    opacity:1.0;
+}
+tr{
+    
+    height: 50px;
+    width: 100%;
+}
+
