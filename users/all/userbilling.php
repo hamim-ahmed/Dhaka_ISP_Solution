@@ -23,6 +23,7 @@ if(isset($_GET['flag'])){
         </style>
     </head>
     <body>
+    <!-- <div><h1 class="ui blue message"> "hamim ahmed" </h1></div> -->
         <div class="topbar">
             <div class="topleft">
               
@@ -152,9 +153,9 @@ if(isset($_GET['flag'])){
                                                 extract($row);
                                                 printf("<tr>");
                                                 printf(" <td> %s</td> <td>%s</td> <td> %s</td> <td> %s</td>
-                                                         <td> %s</td> <td>%s</td> <td> %s</td> <td> %s</td>
-                                                         <td> %s</td> <td>%s</td> <td> %s</td> <td> %s</td>
-                                                         <td> %s</td> <td>%s</td> <td> %s</td> <td> %s</td>
+                                                         <td class='payment'> %s</td> <td class='payment'>%s</td> <td class='payment'> %s</td> <td class='payment'> %s</td>
+                                                         <td class='payment'> %s</td> <td class='payment'>%s</td> <td class='payment'> %s</td> <td class='payment'> %s</td>
+                                                         <td class='payment'> %s</td> <td class='payment'>%s</td> <td class='payment'> %s</td> <td class='payment'> %s</td>
                                                       
                                                          <td>
                                                          <form action='../../users/all/monthlybillpay.php' method='post'>
@@ -197,6 +198,7 @@ if(isset($_GET['flag'])){
             </div>
 
         </div>
+        
 
     </body>
 </html>

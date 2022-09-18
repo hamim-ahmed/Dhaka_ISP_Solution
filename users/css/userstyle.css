@@ -152,6 +152,10 @@ table,th,td{
     height:100%
     
 }
+td.payment{
+    color: rgb(21, 255, 0);
+    font-weight: bold;
+}
 /* th,td{
     width: 300px;;
     padding:5px;
